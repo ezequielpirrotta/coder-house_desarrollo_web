@@ -58,7 +58,7 @@ a{
     flex-direction: column;
 }
 .index-main-content img, p{
-    margin
+    margin: 10px;
     border: solid 5px #FFF ;
 }
 .main-content-gallery{
@@ -78,8 +78,7 @@ a{
     text-align: center;
 }
 .main-content-history div{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top:  20px;
     border: solid 5px #FFF  ;
 }
 .main-content-history #titulo-historia{

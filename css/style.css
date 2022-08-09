@@ -1,6 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-/*mobile first*/
+/*--mobile first--*/
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +11,7 @@ body{
     text-align: center;
     color: antiquewhite;
 }
+
 
 header{
     grid-area: header;
@@ -27,12 +29,12 @@ header{
     font-weight: 600;
     font-family: 'Work Sans', sans-serif;
 }
-
+/*
 ul li{
     list-style-type: none;
     display: inline-block;
 }
-
+*/
 a{
     text-align: justify;
     text-decoration: none;
@@ -64,14 +66,11 @@ a{
 .main-content-gallery{
     display: flex;
     flex-direction: row;
-    /*padding: ;*/
 }
 .main-content-gallery img{
     width: 100%;
 }
-.gallery-row{
 
-}
 .main-content-history {
     display: flex;
     flex-direction: column;
@@ -81,9 +80,7 @@ a{
     margin-top:  20px;
     border: solid 5px #FFF  ;
 }
-.main-content-history #titulo-historia{
-    
-}
+
 .main-content {
     grid-area: content;
     text-align: center;
@@ -122,7 +119,7 @@ a{
     justify-content: flex-start;
 }
 
-/* código para el menu desplegable */
+-- código para el menu desplegable --
 h2 {
     vertical-align: center;
     text-align: center;
@@ -328,3 +325,4 @@ html, body {
         background-color: #6E85B7;
     }
 }
+*/

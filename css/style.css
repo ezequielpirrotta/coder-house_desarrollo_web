@@ -12,14 +12,14 @@ body{
     color: antiquewhite;
 }
 
-
+/*
 header{
     grid-area: header;
 }
-.nav-bar{
+.navbar{
     grid-area: nav-bar;
 }
-
+*/
 .titles{
     color: antiquewhite;
     padding-top: 50px;
@@ -34,12 +34,12 @@ ul li{
     list-style-type: none;
     display: inline-block;
 }
-*/
+
 a{
     text-align: justify;
     text-decoration: none;
 }
-
+*/
 .social-media{
     background-color: brown;
     padding: 20px;
@@ -78,7 +78,7 @@ a{
 }
 .main-content-history div{
     margin-top:  20px;
-    border: solid 5px #FFF  ;
+    border: solid 5px #FFF;
 }
 
 .main-content {
@@ -119,8 +119,8 @@ a{
     justify-content: flex-start;
 }
 
--- código para el menu desplegable --
-h2 {
+/* código para el menu desplegable */
+/*h2 {
     vertical-align: center;
     text-align: center;
 }
@@ -134,8 +134,8 @@ html, body {
     font-family: "Raleway";
     box-sizing: border-box;
 }
-
-.top-nav {
+*/
+/*.top-nav {
     grid-area: top-nav;
     display: flex;
     flex-direction: row;
@@ -145,11 +145,16 @@ html, body {
     height: 50px;
     padding: 1em;
 }
-
-.nav-bar {
+*/
+.navbar-collapse{
+    justify-content: space-around;
+}
+/*
+.my-nav-bar{
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -208,10 +213,12 @@ html, body {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
+*/
+/*
 #main-grid {
     display: grid;
     grid-template-areas:
-     "top-nav   nav-bar "
+     "nav-bar   nav-bar "
      "header    header   "
      "content   content  "
      "footer    footer   ";
@@ -223,7 +230,7 @@ html, body {
   .menu-button-container {
     display: flex;
   }
-  .nav-bar {
+  .navbar {
     position: absolute;
     top: 0;
     margin-top: 50px;
@@ -233,7 +240,7 @@ html, body {
     justify-content: center;
     align-items: center;
   }
-  #menu-toggle ~ .nav-bar ul li button a{
+  #menu-toggle ~ .navbar ul li button a{
     height: 0;
     margin: 0;
     padding: 0;
@@ -246,7 +253,8 @@ html, body {
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .nav-bar > ul li button a{
+  
+  .navbar > ul li a{
     display: flex;
     justify-content: center;
     margin: 0;
@@ -255,6 +263,7 @@ html, body {
     color: white;
     background-color: #222;
   }
+  
   .nav-bar > ul li button a:not(:last-child) {
     border-bottom: 1px solid #444;
   }
@@ -263,12 +272,13 @@ html, body {
     #main-grid {
         grid-template-areas:
          "header    header   "
-         "top-nav   top-nav"
+         "nav-bar   nav-bar"
          "content   content  "
          "footer    footer   ";
         grid-template-rows: auto 15% 1fr auto; 
         grid-template-columns: 20% auto;
     }
+    /*
     .top-nav input + label{
         overflow: hidden;
     }
@@ -295,19 +305,21 @@ html, body {
         padding-right: 75px;
         padding-left: 75px;
     }
+    
 }
 @media screen and (min-width: 768px) {
     body{
         background-color: #7A4069;
     }
-    .nav-bar{
-        grid-area: nav;
+    .navbar{
+        grid-area: nav-bar;
         background-color: aquamarine;
         position: sticky;
         top: 0;
         border: double 5px black;
     
     }
+    /*
     .nav-bar ul{
         display: flex;
         flex-direction: row;
@@ -318,6 +330,7 @@ html, body {
         padding-right: 75px;
         padding-left: 75px;
     }
+    
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,0 +1,125 @@
+@import "fonts";
+@import "globalVariables";
+@import "generals";
+@import "navbar";
+@import "footer";
+/*--mobile first--*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align: center;
+    align-items: center;
+    color: $letters-color;
+    /* animation section */
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.titles{
+    color: $letters-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 5px red;
+    font-size: normal;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+}
+
+ 
+a{
+    text-align: justify;
+    text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.index-main-content {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    img, p{
+        margin: 10px;
+        border: solid 5px $background-color;
+    }
+    img {
+        width: 50%;
+    }
+}
+
+.main-content-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    div.gallery {
+        margin: 5px;
+        border: 1px solid $letters-color;
+        float: left;
+        width: 180px;
+        
+        img {
+            width: 100%;
+            height: auto;   
+        }
+    }
+    
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+    img {
+        width: auto;
+    }
+}
+  
+
+
+.main-content-history {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    div {
+        margin-top:  20px;
+        border: solid 5px $background-color;
+    }
+}
+
+
+
+.main-content-guides {
+    display: flex;
+    flex-direction: column;
+}
+.indice{
+    display: flex;
+    flex-direction: column;
+    ul{
+        display: flex;
+        border:ridge yellow;
+        flex-direction: column;
+        background-color: $letters-color;
+        align-items: center;
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+

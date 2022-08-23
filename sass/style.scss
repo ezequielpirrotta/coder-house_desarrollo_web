@@ -11,7 +11,7 @@
 body{
     text-align: center;
     align-items: center;
-    color: $letters-color;
+    color: map-get($estilos_generales, letters-color);
     /* animation section */
     animation-duration: 2s;
     animation-name: aparecer;
@@ -26,40 +26,43 @@ body{
         opacity: 1;
     }
 }
+@mixin general_padding($top, $bottom){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+.column_form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}    
 
 .titles{
-    color: $letters-color;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    color: map-get($estilos_generales, letters-color);
+    @include general_padding(50px, 50px); 
     text-shadow: 2px 2px 5px red;
     font-size: normal;
     font-weight: 600;
     font-family: 'Work Sans', sans-serif;
 }
 
- 
-a{
-    text-align: justify;
-    text-decoration: none;
-}
-
-.main-content {
-    text-align: center;
-}
-
 .index-main-content {
-    display: flex;
+    @extend .column_form;
+    text-align: justify;
     align-content: center;
     align-items: center;
-    flex-direction: column;
-    img, p{
-        margin: 10px;
-        border: solid 5px $background-color;
+    picture {
+        .index_main_picture {
+            margin: 10px;
+            border: solid 5px map-get($estilos_generales, background-color);
+            width: 100%;
+        }
     }
-    img {
-        width: 50%;
+    p {
+        margin: 10px;
+        border: solid 5px map-get($estilos_generales, background-color);
     }
 }
+
 
 .main-content-gallery {
     display: flex;
@@ -69,7 +72,7 @@ a{
     
     div.gallery {
         margin: 5px;
-        border: 1px solid $letters-color;
+        border: 1px solid map-get($estilos_generales, letters-color);
         float: left;
         width: 180px;
         
@@ -90,36 +93,33 @@ a{
 
 
 .main-content-history {
-    display: flex;
-    flex-direction: column;
+    @extend .column_form;
     text-align: center;
     div {
         margin-top:  20px;
-        border: solid 5px $background-color;
+        border: solid 5px map-get($estilos_generales, background-color);
     }
 }
 
 
 
 .main-content-guides {
-    display: flex;
-    flex-direction: column;
+    @extend .column_form;
 }
 .indice{
-    display: flex;
-    flex-direction: column;
+    @extend .column_form;
     ul{
-        display: flex;
+        @extend .column_form;
         border:ridge yellow;
-        flex-direction: column;
-        background-color: $letters-color;
+        background-color: map-get($estilos_generales, letters-color);
         align-items: center;
     }
 }
 
 .formulario {
-    display: flex;
-    flex-direction: column;
+    background-color: map-get($estilos_generales, letters-color);
+    color: black;
+    @include general_padding(10px, 10px)
 }
 
 

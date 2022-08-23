@@ -1,6 +1,6 @@
 .navbar-nav {
     .nav-item{
-        background-color: $letters-color;
+        background-color: map-get($estilos_generales, letters-color);
         display: flex;
         justify-content: center;
         a:hover{
@@ -11,7 +11,7 @@
 }
  
 .navbar-toggler{
-    background-color: $letters-color;
+    background-color: map-get($estilos_generales, letters-color);
 }
 
 .navbar-collapse{

@@ -78,6 +78,12 @@ body {
     opacity: 1;
   }
 }
+.column_form, .indice ul, .indice, .main-content-guides, .main-content-history, .index-main-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .titles {
   color: antiquewhite;
   padding-top: 50px;
@@ -89,17 +95,18 @@ body {
 }
 
 .index-main-content {
-  display: flex;
+  text-align: justify;
   align-content: center;
   align-items: center;
-  flex-direction: column;
 }
-.index-main-content img, .index-main-content p {
+.index-main-content picture .index_main_picture {
   margin: 10px;
   border: solid 5px #062f55;
+  width: 100%;
 }
-.index-main-content img {
-  width: 50%;
+.index-main-content p {
+  margin: 10px;
+  border: solid 5px #062f55;
 }
 
 .main-content-gallery {
@@ -126,8 +133,6 @@ body {
 }
 
 .main-content-history {
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 .main-content-history div {
@@ -135,24 +140,15 @@ body {
   border: solid 5px #062f55;
 }
 
-.main-content-guides {
-  display: flex;
-  flex-direction: column;
-}
-
-.indice {
-  display: flex;
-  flex-direction: column;
-}
 .indice ul {
-  display: flex;
   border: ridge yellow;
-  flex-direction: column;
   background-color: antiquewhite;
   align-items: center;
 }
 
 .formulario {
-  display: flex;
-  flex-direction: column;
+  background-color: antiquewhite;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */

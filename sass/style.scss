@@ -8,7 +8,14 @@
     padding: 0;
     margin: 0;
 }
+.column_form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}   
 body{
+    @extend .column_form;
+    min-height: 100%;
     text-align: center;
     align-items: center;
     color: map-get($estilos_generales, letters-color);
@@ -30,11 +37,7 @@ body{
     padding-top: $top;
     padding-bottom: $bottom;
 }
-.column_form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}    
+ 
 
 .titles{
     color: map-get($estilos_generales, letters-color);
@@ -54,7 +57,7 @@ body{
         .index_main_picture {
             margin: 10px;
             border: solid 5px map-get($estilos_generales, background-color);
-            width: 100%;
+            width: auto;
         }
     }
     p {
@@ -65,32 +68,47 @@ body{
 
 
 .main-content-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    div.gallery {
-        margin: 5px;
-        border: 1px solid map-get($estilos_generales, letters-color);
-        float: left;
-        width: 180px;
+    box-sizing: border-box;
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
         
-        img {
-            width: 100%;
-            height: auto;   
+        .column {
+            flex: 100%;
+            padding: 5px;
+            
+            img {
+                width: 100%;
+                margin-top: 5px;
+                border: 1px solid map-get($estilos_generales, letters-color); 
+            }
+            img:hover {
+                border: 1px solid #777;
+            }
         }
-    }
-    
-    div.gallery:hover {
-        border: 1px solid #777;
-    }
-    img {
-        width: auto;
+          
     }
 }
-  
 
+@media (min-width: 500px) and (max-width: 800px) {
+    .main-content-gallery {
+        .row {
+            .column {
+                flex: 50%;
+            }
+        }
+    }
+}
+@media (min-width: 800px) {
+    .main-content-gallery {
+        .row {
+            .column {
+                flex: 25%;
+            }
+        }
+    }
+}  
 
 .main-content-history {
     @extend .column_form;
@@ -117,9 +135,15 @@ body{
 }
 
 .formulario {
-    background-color: map-get($estilos_generales, letters-color);
-    color: black;
-    @include general_padding(10px, 10px)
+    form {
+        input .email:required{
+            border: 1px dashed red;
+            color: red;  
+        }
+        background-color: map-get($estilos_generales, letters-color);
+        color: black;
+        @include general_padding(10px, 10px)
+    }
 }
 
 
